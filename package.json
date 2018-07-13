@@ -1,6 +1,6 @@
 {
   "name": "vue2-leaflet-googlemutant",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "googlemutant plugin extension for vue2-leaflet package",
   "main": "dist/Vue2LeafletGoogleMutant.js",
   "scripts": {
