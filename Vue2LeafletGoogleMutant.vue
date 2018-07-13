@@ -33,9 +33,11 @@ export default {
     L.DomEvent.on(this.mapObject, this.$listeners);
     propsBinder(this, this.mapObject, props);
 
-    let googleapisscript = document.createElement('script')
-    googleapisscript.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?key='+this.apikey)
-    document.head.appendChild(googleapisscript)
+    if (!(typeof google === 'object' && typeof google.maps === 'object')) {
+      let googleapisscript = document.createElement('script');
+      googleapisscript.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?key='+this.apikey);
+      document.head.appendChild(googleapisscript);
+    }
 
     this.ready = true;
     this.parentContainer = findRealParent(this.$parent);
