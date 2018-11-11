@@ -18,7 +18,19 @@ const props = {
   apikey: {
     type: String,
     default() { return ''; },
-  }
+  },
+  name: {
+    type: String,
+    default: ''
+  },
+  layerType: {
+    type: String,
+    default: 'base'
+  },
+  visible: {
+    type: Boolean,
+    default: true,
+  },
 };
 
 export default {
@@ -41,7 +53,7 @@ export default {
 
     this.ready = true;
     this.parentContainer = findRealParent(this.$parent);
-    this.parentContainer.addLayer(this);
+    this.parentContainer.addLayer(this, !this.visible);
   },
   beforeDestroy() {
     this.parentContainer.removeLayer(this);
