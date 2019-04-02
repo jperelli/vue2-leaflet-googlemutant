@@ -30,9 +30,11 @@ something like this
     <v-map :zoom=10 :center="initialLocation">
       <v-icondefault :image-path="'/statics/leafletImages/'"></v-icondefault>
       <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
-      <v-tilelayer-googlemutant apikey="YOUR_API_KEY" :options="googlemutantoptionsobject">
+      <v-tilelayer-googlemutant apikey="YOUR_API_KEY" lang="YOUR_LANG" region="YOUR_REGION" :options="googlemutantoptionsobject">
       </v-tilelayer-googlemutant>
     </v-map>
+
+For available languages and regions, refer to Google Maps documentation on [localizing the map](https://developers.google.com/maps/documentation/javascript/localization).
 
 ### on &lt;script&gt; add
 
