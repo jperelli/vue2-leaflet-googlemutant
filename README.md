@@ -4,7 +4,7 @@ This is a [googlemutant plugin](https://gitlab.com/IvanSanchez/Leaflet.GridLayer
 
 ## Install
 
-    npm install --save vue2-leaflet-googlemutant
+    npm install --save vue2-leaflet-googlemutant vue2-leaflet leaflet leaflet.gridlayer.googlemutant
 
 ## Demo
 
