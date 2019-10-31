@@ -5,14 +5,14 @@
 </template>
 
 <script>
-  import L from 'leaflet'
-  import * as Vue2Leaflet from 'vue2-leaflet'
+  import { latLng } from 'leaflet'
+  import { LMap, LTileLayer } from 'vue2-leaflet'
   import Vue2LeafletGoogleMutant from './Vue2LeafletGoogleMutant'
 
   export default {
     components: {
-      'v-map': Vue2Leaflet.LMap,
-      'v-tilelayer': Vue2Leaflet.LTileLayer,
+      'v-map': LMap,
+      'v-tilelayer': LTileLayer,
       'v-tilelayer-googlemutant': Vue2LeafletGoogleMutant
     },
     methods: {
@@ -25,7 +25,7 @@
       return {
         apikey,
         options,
-        initialLocation: L.latLng(-34.9205, -57.953646)
+        initialLocation: latLng(-34.9205, -57.953646)
       }
     }
   }
